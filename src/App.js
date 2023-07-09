@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/App.scss';
+import Header from './components/header';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import React, {useState}from 'react';
+import Note from './pages/note'
+import Others from './components/others';
+
+
 
 function App() {
+  const [others, setOthers] = useState(false)
+  function handleOpenOthers() {
+    others===false?setOthers(true):setOthers(false)
+  }
+  function handleCloseOthers() {
+    setOthers(false)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section>
+     <Header onOpenOthers={handleOpenOthers} onCloseOthers={handleCloseOthers}/>
+      {others&&<Others/>}
+      <div className="app">
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Navigate replace to="/notes" />} />
+            <Route path='/notes/:id?' element={<Note onCloseOthers={handleCloseOthers}/>}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </section>
   );
 }
 

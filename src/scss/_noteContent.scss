@@ -1,0 +1,113 @@
+.noteContent {
+    width: calc(-470px + 100vw);
+    height: 100%;
+    overflow: hidden;
+
+    @media (max-width: 767px) {
+        width: 100vw;
+    }
+    .noteHeader {
+        width: calc(100% - 30px);
+        height: 40px;
+        padding: 0px 15px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        position: relative;
+        div {
+            display: flex;
+        }
+        button {
+            border: none;
+            background: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: red;
+            margin-top: 9px;
+        }
+        .backBtn {
+            color: #ffab15;
+            margin-right: 20px;
+            font-size: 1.8rem;
+            display: none;
+            margin-top: 5px;
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+        .addBtn {
+            color: #ffab15;
+            font-size: 1.5rem;
+            margin-top: 8px;
+        }
+        .favBtn {
+            margin-top: 6px;
+            color: #ffab15;
+            margin-right: 20px;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .recoverBtn {
+            font-size: 1.5rem;
+        }
+        hr {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+    .noNote{
+        position: relative;
+        background: #dfdfe4;
+        width: 100%;
+        height: calc(100% - 40px);
+        p {
+            font-size: 1rem;
+            color: #9d9da3;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .noteTitle {
+        width: calc(100% - 40px);
+        height: 10px;
+        color: #000;
+        font-size: 1.3rem;
+        font-weight: 600;
+        background: rgb(222,222,222,0.22);
+        overflow: hidden;
+        outline: none;
+        text-overflow: ellipsis;
+        padding: 20px;
+    }
+
+    .noteBody {
+        border: none;
+        outline: none;
+        resize: none;
+        background: #fff;
+        width: calc(100% - 40px);
+        height: calc(100% - 110px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: 100;
+        line-height: 1.5;
+        
+        &::-webkit-scrollbar {
+          display: none;
+      }
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+      
+}

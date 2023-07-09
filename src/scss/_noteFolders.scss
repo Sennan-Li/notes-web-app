@@ -1,0 +1,135 @@
+.noteFolders {
+    background-color: #f2f2f7;
+    width: 200px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  
+
+    @media (max-width: 767px) {
+        width: 100vw;
+    }
+    .folders {
+        margin: 10px;
+        height: calc(100% - 50px);
+        overflow-x: hidden;
+        overflow-y: scroll;
+        h3{
+            display: none;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            @media (max-width: 767px) {
+                display: block;
+            }
+        }
+        .noteFolderItem{
+            cursor: pointer;
+            display: flex;
+            border-radius: 7px;
+            padding: 10px;
+            .noteFolderIcon {
+                display: block;
+                font-size: 1.2rem;
+                margin-right: 5px;
+                color: #ffab15;
+                margin-top: -1px;
+                @media (max-width: 767px) {
+                    font-size: 1.8rem;
+                }
+            }
+            .noteFolderDeletedIcon{
+                color: red;
+            }
+            .noteFolderListIcon {
+                font-size: 1.5rem;
+                margin-right: 5px;
+                color: #ffab15;
+                @media (max-width: 767px) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            h4 {
+                @media (max-width: 767px) {
+                    font-size: 1.2rem;
+                    margin-top: 4px;
+                }
+            }
+            input {
+                background: none;
+                color: #000;
+                font-size: 1rem;
+                font-weight: 500;
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                border-radius: 5px;
+                padding: 3px;
+                @media (max-width: 767px) {
+                    font-size: 1.2rem;
+                }
+            }
+            .editInput {
+                background: #f2f2f7;
+                border: 1px solid;
+                
+            }
+        }
+        .noteFolderItemActive {
+            background-color: rgb(222,222,222,0.8);
+        }
+    }
+    .noteFoldersFootage{
+        width: 100%;
+        background-color: #f5f5f7;
+        height: 40px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        div {
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            button {
+                cursor: pointer;
+                display: block;
+                font-size: 1rem;
+                color: #ffab15;
+                border: none;
+                background: none;
+                margin-top: 3px;  
+                @media (max-width: 767px) {
+                    font-size: 1.3rem;
+                }
+                &:last-child{
+                    margin-top: 8px;
+                    font-size: 1.6rem;   
+                    @media (max-width: 767px) {
+                        font-size: 1.9rem;
+                    }
+                }        
+            }
+            
+        }
+        hr {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+
+    .noteFoldersDivider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        opacity: 0.3;
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+} 

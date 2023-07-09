@@ -1,3 +1,12 @@
+@font-face {
+  font-family: hamburger;
+  src: url(./assets/fonts/hamburger.ttf);
+}
+* {
+  font-family: hamburger;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +19,41 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+hr {
+  border: 0.1px solid #bfbdbd;
+}
+
+.hide {
+  display: none;
+}
+.unhide{
+  display: block;
+}
+.disabled {
+  opacity: 0.4;
+}
+.folderDisabled {
+  opacity: 1;
+}
+
+
+input{
+  border: none;
+  &:disabled{
+    opacity: 1;
+}
 }

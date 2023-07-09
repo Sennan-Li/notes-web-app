@@ -1,0 +1,40 @@
+@import './header';
+.app {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: calc(100vh - 50px);
+    height: calc(100svh - 50px);
+    @media (max-width: 767px) {
+        display: block;
+    }
+
+    @import './noteFolders.scss';
+    @import './noteLists.scss';
+    @import './noteContent.scss';
+
+ 
+    .hideForMobile{
+        display: block;
+        @media (max-width: 767px){
+            display: none;
+        }
+    }
+    .specailHideForNoteLists{
+        display: block;
+        @media (max-width: 767px){
+            display: none;
+        }
+
+    }
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    button {
+        &:hover{
+            opacity: 0.4;
+        }
+    }
+}
+
+@import './others';
